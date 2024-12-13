@@ -1,6 +1,13 @@
+---
+const { className } = Astro.props;
+---
+
 <a
   href="#"
-  class="w-20 h-20 flex flex-col items-center bg-white/5 p-5 justify-center rounded-xl border border-white/20 text-sm font-semibold"
+  class:list={[
+    "w-20 h-20 flex flex-col items-center bg-white/5 p-5 justify-center rounded-xl border border-white/20 text-sm font-semibold before:content-[''] before:absolute before:w-14 before:h-14 before:z-[-2] before:rounded-full before:blur-xl before:transition before:duration-500 before:ease-in-out",
+    className,
+  ]}
 >
   <slot />
 </a>
