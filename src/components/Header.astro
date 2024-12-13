@@ -1,8 +1,9 @@
 ---
 import Logo from "./Logo.astro";
 import MoonIcon from "./MoonIcon.astro";
-import GitHubIcon from "./GitHubIcon.astro";
-import LinkedInIcon from "./LinkedInIcon.astro";
+import SocialPill from "./SocialPill.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
 
 <header class="w-full py-10">
@@ -33,20 +34,27 @@ import LinkedInIcon from "./LinkedInIcon.astro";
       </p>
     </div>
     <button
-      class="flex gap-3 items-center justify-center text-sm border py-2 px-4 border-slate-600 rounded-lg"
+      class="flex gap-3 items-center justify-center text-sm py-2 px-4 rounded-lg bg-white/5 border border-slate-600"
     >
-      <span class="block w-2 h-2 rounded-full bg-green-500"></span>
+      <span class="relative flex h-2.5 w-2.5">
+        <span
+          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+        ></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"
+        ></span>
+      </span>
       Disponible para nuevos desafíos
     </button>
+
     <div class="flex gap-10">
-      <a href="#" class="flex items-center gap-3">
-        <GitHubIcon />
-        GitHub</a
-      >
-      <a href="#" class="flex items-center gap-3">
-        <LinkedInIcon />
-        LinkedIn</a
-      >
+      <SocialPill>
+        <GitHubIcon class="h-5 w-auto" />
+        GitHub
+      </SocialPill>
+      <SocialPill>
+        <LinkedInIcon class="h-5 w-auto" />
+        LinkedIn
+      </SocialPill>
     </div>
   </section>
 </header>
