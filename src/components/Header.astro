@@ -2,6 +2,7 @@
 import Logo from "./Logo.astro";
 import MoonIcon from "./MoonIcon.astro";
 import SocialPill from "./SocialPill.astro";
+import ArrowTopRight from "./icons/ArrowTopRight.astro";
 import GitHubIcon from "./icons/GitHub.astro";
 import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
@@ -48,12 +49,26 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
 
     <div class="flex gap-10">
       <SocialPill>
-        <GitHubIcon class="h-5 w-auto" />
+        <span class="flex relative h-5 w-5 overflow-hidden">
+          <ArrowTopRight
+            class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
+          />
+          <GitHubIcon
+            class="h-5 w-auto flex group-hover:scale-0 group-hover:opacity-0 scale-100 opacity-100 transition duration-200 ease-out"
+          />
+        </span>
         GitHub
-      </SocialPill>
-      <SocialPill>
-        <LinkedInIcon class="h-5 w-auto" />
-        LinkedIn
+        <SocialPill>
+          <span class="flex relative h-5 w-5 overflow-hidden">
+            <ArrowTopRight
+              class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
+            />
+            <LinkedInIcon
+              class="h-5 w-auto flex group-hover:scale-0 group-hover:opacity-0 scale-100 opacity-100 transition duration-200 ease-out"
+            />
+          </span>
+          LinkedIn
+        </SocialPill>
       </SocialPill>
     </div>
   </section>
