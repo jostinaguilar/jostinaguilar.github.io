@@ -1,6 +1,5 @@
 ---
-import Logo from "./Logo.astro";
-import MoonIcon from "./MoonIcon.astro";
+import Navbar from "./Navbar.astro";
 import SocialPill from "./SocialPill.astro";
 import ArrowTopRight from "./icons/ArrowTopRight.astro";
 import GitHubIcon from "./icons/GitHub.astro";
@@ -8,23 +7,7 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
 
 <header class="w-full py-10">
-  <nav class="w-full flex max-w-screen-lg justify-between m-auto">
-    <div class="w-4 h-auto">
-      <a href="/">
-        <Logo />
-      </a>
-    </div>
-    <div class="flex gap-6">
-      <a href="#">Home</a>
-      <a href="#">Proyectos</a>
-      <a href="#">Mi Stack</a>
-    </div>
-    <div>
-      <button class="w-6">
-        <MoonIcon />
-      </button>
-    </div>
-  </nav>
+  <Navbar />
   <section
     class="max-w-screen-lg m-auto flex items-center flex-col pt-20 gap-8"
   >
@@ -48,7 +31,7 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
     </button>
 
     <div class="flex gap-10">
-      <SocialPill>
+      <SocialPill href="https://github.com/jostinaguilar">
         <span class="flex relative h-5 w-5 overflow-hidden">
           <ArrowTopRight
             class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
@@ -58,7 +41,7 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
           />
         </span>
         GitHub
-        <SocialPill>
+        <SocialPill href="#">
           <span class="flex relative h-5 w-5 overflow-hidden">
             <ArrowTopRight
               class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
