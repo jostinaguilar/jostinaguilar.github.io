@@ -1,0 +1,89 @@
+---
+import MoonIcon from "./icons/Moon.astro";
+---
+
+<div class="relative">
+  <button id="theme-icon" class="h-6 w-6 relative">
+    <MoonIcon />
+  </button>
+  <div
+    id="theme-dropdown"
+    class="absolute right-0 bg-white/5 border border-white/25 rounded-lg w-32 p-1 hidden"
+  >
+    <button
+      id="light"
+      class="w-full py-2 px-4 text-sm text-left hover:bg-white/10 rounded-md transition duration-300 ease-in"
+    >
+      Light
+    </button>
+    <button
+      id="dark"
+      class="w-full py-2 px-4 text-sm text-left hover:bg-white/10 rounded-md transition duration-300 ease-in"
+    >
+      Dark
+    </button>
+    <button
+      id="system"
+      class="w-full py-2 px-4 text-sm text-left hover:bg-white/10 rounded-md transition duration-300 ease-in"
+    >
+      System
+    </button>
+  </div>
+</div>
+
+<style>
+  #theme-dropdown.open {
+    display: block;
+    animation: dropdown 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes dropdown {
+    from {
+      opacity: 0;
+      transform: scale(0) translate(100%, -100%);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translate(0%, 0%);
+    }
+  }
+</style>
+
+<script is:inline>
+  const light = document.querySelector("#light");
+  const dark = document.querySelector("#dark");
+  const system = document.querySelector("#system");
+  const themeBtn = document.querySelector("#theme-icon");
+  const themeDropdown = document.querySelector("#theme-dropdown");
+
+  themeBtn.addEventListener("click", () => {
+    themeDropdown.classList.toggle("open");
+  });
+
+  const getThemeUser = window.matchMedia("(prefers-color-scheme: dark)");
+
+  dark.addEventListener("click", () => {
+    document.querySelector("html").classList.add("dark");
+    themeDropdown.classList.remove("open");
+  });
+
+  light.addEventListener("click", () => {
+    document.querySelector("html").classList.remove("dark");
+    themeDropdown.classList.remove("open");
+  });
+
+  system.addEventListener("click", () => {
+    if (getThemeUser.matches) {
+      document.querySelector("html").classList.add("dark");
+      themeDropdown.classList.remove("open");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+      themeDropdown.classList.remove("open");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (getThemeUser.matches) {
+      document.querySelector("html").classList.add("dark");
+    }
+  });
+</script>
