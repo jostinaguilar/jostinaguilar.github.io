@@ -12,13 +12,15 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
     class="max-w-screen-lg m-auto flex items-center flex-col pt-20 gap-8"
   >
     <div class="flex items-center flex-col gap-4">
-      <h1 class="text-5xl font-black">Jostin Aguilar</h1>
-      <p class="text-neutral-200 text-lg">
+      <h1 class="text-slate-900 dark:text-white text-5xl font-black">
+        Jostin Aguilar
+      </h1>
+      <p class="text-slate-800 dark:text-neutral-200 text-lg">
         Soy peruano y por las noches Desarrollador Web.
       </p>
     </div>
     <button
-      class="flex gap-3 items-center justify-center text-sm py-2 px-4 rounded-lg bg-white/5 border border-slate-600"
+      class="flex gap-3 items-center justify-center text-sm py-2 px-4 rounded-lg border border-gray-400 text-slate-900 dark:text-white"
     >
       <span class="relative flex h-2.5 w-2.5">
         <span
@@ -32,7 +34,9 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
 
     <div class="flex gap-10">
       <SocialPill href="https://github.com/jostinaguilar">
-        <span class="flex relative h-5 w-5 overflow-hidden">
+        <span
+          class="flex relative h-5 w-5 overflow-hidden text-slate-900 dark:text-white"
+        >
           <ArrowTopRight
             class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
           />
@@ -42,7 +46,9 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
         </span>
         GitHub
         <SocialPill href="#">
-          <span class="flex relative h-5 w-5 overflow-hidden">
+          <span
+            class="flex relative h-5 w-5 overflow-hidden text-slate-900 dark:text-white"
+          >
             <ArrowTopRight
               class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
             />

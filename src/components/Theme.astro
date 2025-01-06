@@ -3,7 +3,10 @@ import MoonIcon from "./icons/Moon.astro";
 ---
 
 <div class="relative">
-  <button id="theme-icon" class="h-6 w-6 relative">
+  <button
+    id="theme-icon"
+    class="h-6 w-6 relative text-slate-900 dark:text-white"
+  >
     <MoonIcon />
   </button>
   <div
@@ -83,7 +86,7 @@ import MoonIcon from "./icons/Moon.astro";
 
   document.addEventListener("DOMContentLoaded", () => {
     if (getThemeUser.matches) {
-      document.querySelector("html").classList.add("dark");
+      document.querySelector("html").classList.add("");
     }
   });
 </script>
