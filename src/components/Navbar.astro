@@ -3,26 +3,28 @@ import Logo from "./icons/Logo.astro";
 import Theme from "./Theme.astro";
 ---
 
-<nav class="w-full flex max-w-screen-lg justify-between m-auto items-center">
+<nav
+  class="w-full flex max-w-screen-lg justify-between m-auto items-center sticky top-0 py-10 z-10"
+>
   <div class="w-4 h-auto">
-    <a href="/" class="text-slate-900 dark:text-white">
+    <a href="/" class="text-black dark:text-white">
       <Logo />
     </a>
   </div>
   <div class="flex gap-6 items-center">
     <a
       href="#"
-      class="text-slate-900 font-medium dark:text-white flex py-2 px-4 rounded-lg bg-transparent hover:bg-white/5 transition duration-300 ease-in"
+      class="text-black font-medium dark:text-white flex py-2 px-4 rounded-lg bg-transparent hover:bg-white/5 transition duration-300 ease-in"
       >Home</a
     >
     <a
       href="#projects"
-      class="text-slate-900 font-medium dark:text-white flex py-2 px-4 rounded-lg bg-transparent hover:bg-white/5 transition duration-300 ease-in"
+      class="text-black font-medium dark:text-white flex py-2 px-4 rounded-lg bg-transparent hover:bg-white/5 transition duration-300 ease-in"
       >Proyectos</a
     >
     <a
       href="#"
-      class="text-slate-900 font-medium dark:text-white flex py-2 px-4 rounded-lg bg-transparent hover:bg-white/5 transition duration-300 ease-in"
+      class="text-black font-medium dark:text-white flex py-2 px-4 rounded-lg bg-transparent hover:bg-white/5 transition duration-300 ease-in"
       >Mi Stack</a
     >
   </div>

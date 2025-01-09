@@ -8,21 +8,22 @@ import StackCard from "./StackCard.astro";
 ---
 
 <section class="max-w-screen-lg m-auto py-10">
-  <section class="flex flex-row gap-4 w-full items-center justify-center">
-    <StackCard className={"hover:before:bg-[#e34f26]"}>
+  <section class="grid grid-cols-3 gap-4 w-full items-center justify-center">
+    <StackCard className={"bg-[#e34f26]"}>
       <HtmlIcon class="w-full h-full" />
     </StackCard>
-    <StackCard className={"hover:before:bg-[#639]"}>
+    <StackCard className={"bg-[#639]"}>
       <CssIcon class="w-full h-full" />
     </StackCard>
-    <StackCard className={"hover:before:bg-[#f0db4f]"}>
+    <StackCard className={"bg-[#f0db4f]"}>
       <JavaScriptIcon class="w-full h-full" />
     </StackCard>
-    <StackCard className={"hover:before:bg-[#4f5b93]"}>
+    <StackCard className={"bg-[#4f5b93]"}>
       <PhpIcon class="w-full h-full text-black dark:text-white" />
     </StackCard>
-    <StackCard className={"hover:before:bg-[#ff2d20]"}>
+    <StackCard className={"bg-[#ff2d20]"}>
       <LaravelIcon class="w-full h-full" />
     </StackCard>
+    <StackCard className={"opacity-50"} />
   </section>
 </section>

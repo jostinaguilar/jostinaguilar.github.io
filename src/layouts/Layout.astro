@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/onest";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -11,10 +12,14 @@ import "@fontsource-variable/onest";
     <meta name="generator" content={Astro.generator} />
     <title>Jostin Aguilar</title>
   </head>
-  <body class="bg-gray-100 dark:bg-slate-950">
-    <div
-      class="z-[-1] absolute -top-[60%] left-1/2 w-[1024px] h-[1024px] rounded-full blur-[200px] bg-[#0055FF] -translate-x-1/2"
-    >
+  <body class="bg-zinc-50 dark:bg-zinc-950">
+    <Navbar />
+    <div class="w-full absolute z-[-2] top-0">
+      <img
+        class="w-full h-auto mx-auto"
+        src="/src/assets/glow-top.png"
+        alt=""
+      />
     </div>
     <slot />
   </body>
