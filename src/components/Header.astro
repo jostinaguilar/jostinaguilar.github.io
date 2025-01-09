@@ -1,7 +1,7 @@
 ---
 import SocialPill from "./SocialPill.astro";
 import Stack from "./Stack.astro";
-import ArrowTopRight from "./icons/ArrowTopRight.astro";
+import Badge from "./Badge.astro";
 import GitHubIcon from "./icons/GitHub.astro";
 import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
@@ -11,56 +11,32 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
     class="max-w-screen-lg m-auto flex items-center flex-row py-10 gap-8"
   >
     <div class="flex flex-col gap-6">
-      <div class="flex flex-col gap-3">
+      <Badge />
+      <div class="flex flex-col gap-2">
         <h1 class="text-black dark:text-white text-5xl font-black">
           Jostin Aguilar
         </h1>
         <p class="text-slate-800 dark:text-neutral-200 text-base">
-          Desde Perú, creando soluciones web modernas para Latam.
+          Desde Perú, creando
+          <span class="font-semibold text-[#0055ff]"
+            >soluciones web modernas</span
+          > para Latam.
         </p>
       </div>
-      <div class="flex items-center">
-        <span class="relative inline-flex overflow-hidden rounded-2xl p-[1px]">
-          <span
-            class="absolute inset-[-1000%] bg-[conic-gradient(from_90deg_at_50%_50%,#2fad6d_0%,transparent_50%,#2fad6d_100%)] animate-[spin_3s_linear_infinite] z-[-2]"
-          >
-          </span>
-          <div
-            class="bg-zinc-50 dark:bg-zinc-950 text-[#2FAD6D] w-fit flex gap-2 items-center justify-center py-1.5 px-3 rounded-[15px] font-medium text-sm"
-          >
-            <span
-              class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2FAD6D]"
-            ></span>
-            Disponible para nuevos desafíos
-          </div>
-        </span>
-      </div>
-      <div class="flex gap-10 mt-3">
-        <SocialPill href="https://github.com/jostinaguilar">
-          <span
-            class="flex relative h-5 w-5 overflow-hidden text-black dark:text-white"
-          >
-            <ArrowTopRight
-              class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
-            />
-            <GitHubIcon
-              class="h-5 w-auto flex group-hover:scale-0 group-hover:opacity-0 scale-100 opacity-100 transition duration-200 ease-out"
-            />
-          </span>
+      <div class="flex gap-3">
+        <SocialPill
+          href="https://github.com/jostinaguilar"
+          className="bg-zinc-50 text-zinc-950 border-zinc-300 hover:bg-zinc-100 hover:border-zinc-500"
+        >
+          <GitHubIcon class="h-5 w-auto" />
           GitHub
-          <SocialPill href="#">
-            <span
-              class="flex relative h-5 w-5 overflow-hidden text-black dark:text-white"
-            >
-              <ArrowTopRight
-                class="absolute h-5 w-auto scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transform duration-200 ease-in -bottom-1/2 -left-1/2 group-hover:bottom-0 group-hover:left-0"
-              />
-              <LinkedInIcon
-                class="h-5 w-auto flex group-hover:scale-0 group-hover:opacity-0 scale-100 opacity-100 transition duration-200 ease-out"
-              />
-            </span>
-            LinkedIn
-          </SocialPill>
+        </SocialPill>
+        <SocialPill
+          href="#"
+          className="bg-blue-50 text-blue-700 border-blue-300 hover:bg-blue-100 hover:border-blue-500"
+        >
+          <LinkedInIcon class="h-5 w-auto" />
+          LinkedIn
         </SocialPill>
       </div>
     </div>

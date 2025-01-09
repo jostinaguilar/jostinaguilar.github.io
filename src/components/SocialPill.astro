@@ -1,8 +1,15 @@
+---
+const { className } = Astro.props;
+---
+
 <a
   href={Astro.props.href}
   target="_blank"
   rel="noopener noreferrer"
-  class="group relative flex items-center gap-2 text-sm text-slate-900 dark:text-white"
+  class:list={[
+    "inline-flex py-1 px-2 rounded-full gap-1 border items-center text-sm font-medium transition duration-300 ease-in",
+    className,
+  ]}
 >
   <slot />
 </a>

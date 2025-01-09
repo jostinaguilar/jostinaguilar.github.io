@@ -10,19 +10,29 @@ import StackCard from "./StackCard.astro";
 <section class="max-w-screen-lg m-auto py-10">
   <section class="grid grid-cols-3 gap-4 w-full items-center justify-center">
     <StackCard className={"bg-[#e34f26]"}>
-      <HtmlIcon class="w-full h-full" />
+      <HtmlIcon
+        class="w-full h-full group-hover:scale-105 transition duration-300 ease-in"
+      />
     </StackCard>
     <StackCard className={"bg-[#639]"}>
-      <CssIcon class="w-full h-full" />
+      <CssIcon
+        class="w-full h-full group-hover:scale-105 transition duration-300 ease-in"
+      />
     </StackCard>
     <StackCard className={"bg-[#f0db4f]"}>
-      <JavaScriptIcon class="w-full h-full" />
+      <JavaScriptIcon
+        class="w-full h-full group-hover:scale-105 transition duration-300 ease-in"
+      />
     </StackCard>
     <StackCard className={"bg-[#4f5b93]"}>
-      <PhpIcon class="w-full h-full text-black dark:text-white" />
+      <PhpIcon
+        class="w-full h-full group-hover:scale-105 transition duration-300 ease-in text-black dark:text-white"
+      />
     </StackCard>
     <StackCard className={"bg-[#ff2d20]"}>
-      <LaravelIcon class="w-full h-full" />
+      <LaravelIcon
+        class="w-full h-full group-hover:scale-105 transition duration-300 ease-in"
+      />
     </StackCard>
     <StackCard className={"opacity-50"} />
   </section>
