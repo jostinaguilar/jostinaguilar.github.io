@@ -1,8 +1,6 @@
 ---
 import "@fontsource-variable/onest";
 import Navbar from "../components/Navbar.astro";
-import { Image } from "astro:assets";
-import topGlow from "../assets/glow-top.png";
 ---
 
 <!doctype html>
@@ -17,7 +15,11 @@ import topGlow from "../assets/glow-top.png";
   <body class="bg-zinc-50 dark:bg-zinc-950">
     <Navbar />
     <div class="w-full absolute z-[-2] top-0">
-      <Image src={topGlow} alt="glow" class="w-full h-auto mx-auto" />
+      <img
+        src="/images/glow-top.png"
+        alt="glow"
+        class="w-full h-auto mx-auto"
+      />
     </div>
     <slot />
   </body>
