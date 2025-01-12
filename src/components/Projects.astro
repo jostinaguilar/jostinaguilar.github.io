@@ -1,10 +1,14 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
 <section class="max-w-screen-lg m-auto pt-10" id="projects">
   <div class="flex justify-between items-center">
-    <h2 class="text-xl font-semibold text-slate-900 dark:text-white">
+    <h2 class="text-xl font-semibold text-slate-500 dark:text-slate-100">
       Proyectos
     </h2>
     <button
-      class="bg-black/5 text-slate-900 dark:text-white py-2 px-4 rounded-md flex gap-2 items-center"
+      class="bg-slate-100 dark:bg-slate-900 dark:border-slate-700 text-slate-500 dark:text-slate-300 py-2 px-4 rounded-md flex gap-2 items-center"
       >Todo
       <svg
         width="15"
@@ -21,35 +25,11 @@
     </button>
   </div>
   <section class="grid grid-cols-3 w-full gap-5 py-5">
-    <div
-      class="w-auto h-auto text-slate-900 dark:text-white aspect-square bg-black/5 border border-black/15 rounded-lg flex items-center justify-center p-4"
-    >
-      Próximamente
-    </div>
-    <div
-      class="w-auto h-auto text-slate-900 dark:text-white aspect-square bg-black/5 border border-black/15 rounded-lg flex items-center justify-center p-4"
-    >
-      Próximamente
-    </div>
-    <div
-      class="w-auto h-auto text-slate-900 dark:text-white aspect-square bg-black/5 border border-black/15 rounded-lg flex items-center justify-center p-4"
-    >
-      Próximamente
-    </div>
-    <div
-      class="w-auto h-auto text-slate-900 dark:text-white aspect-square bg-black/5 border border-black/15 rounded-lg flex items-center justify-center p-4"
-    >
-      Próximamente
-    </div>
-    <div
-      class="w-auto h-auto text-slate-900 dark:text-white aspect-square bg-black/5 border border-black/15 rounded-lg flex items-center justify-center p-4"
-    >
-      Próximamente
-    </div>
-    <div
-      class="w-auto h-auto text-slate-900 dark:text-white aspect-square bg-black/5 border border-black/15 rounded-lg flex items-center justify-center p-4"
-    >
-      Próximamente
-    </div>
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
   </section>
 </section>
