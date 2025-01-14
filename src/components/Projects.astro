@@ -2,7 +2,7 @@
 import ProjectCard from "./ProjectCard.astro";
 ---
 
-<section class="max-w-screen-lg m-auto pt-10" id="projects">
+<section class="max-w-screen-lg m-auto pt-10 relative" id="projects">
   <div class="flex justify-between items-center">
     <h2 class="text-xl font-semibold text-slate-500 dark:text-slate-100">
       Proyectos
@@ -32,4 +32,9 @@ import ProjectCard from "./ProjectCard.astro";
     <ProjectCard />
     <ProjectCard />
   </section>
+  <img
+    class="absolute top-1/2 z-[-1] -right-1/4 -translate-y-1/2"
+    src="/images/glow-body.png"
+    alt="glow body"
+  />
 </section>
