@@ -11,10 +11,14 @@ import "@fontsource-variable/onest";
     <meta name="generator" content={Astro.generator} />
     <title>Jostin Aguilar</title>
   </head>
-  <body class="bg-slate-50 dark:bg-slate-950 antialiased w-full">
-    <div
-      class="absolute -z-10 top-0 w-full h-[60%] bg-cover bg-no-repeat bg-mesh-gradient dark:bg-mesh-gradient-dark bg-slate-50 dark:bg-slate-950"
-    >
+  <body class="bg-white dark:bg-black antialiased w-full">
+    <div class="glow">
+      <div class="glow-top"></div>
+      <div class="glow-one">
+        <div class="glow-two"></div>
+        <div class="glow-three"></div>
+        <div class="glow-four"></div>
+      </div>
     </div>
     <slot />
   </body>
@@ -22,13 +26,95 @@ import "@fontsource-variable/onest";
 <style>
   html,
   body {
-    position: relative;
-    z-index: -2;
     font-family: "Onest Variable", sans-serif;
     color: #fff;
     margin: 0;
     width: 100%;
     min-height: 100dvh;
     scroll-behavior: smooth;
+  }
+  .glow {
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    top: 0;
+    overflow: hidden;
+  }
+  .glow-top {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(
+      40% 50% at 50% 0%,
+      hsla(204, 100%, 50%, 0.5) 0%,
+      hsla(204, 100%, 50%, 0.25) 30%,
+      hsla(0, 0%, 0%, 0) 100%
+    );
+  }
+  .glow-one {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(
+      62% 75% at 50% 45%,
+      rgba(0, 85, 255, 0) 0%,
+      rgba(0, 85, 255, 0) 30%,
+      rgba(0, 85, 255, 0) 55%,
+      rgba(0, 85, 255, 0.25) 80%,
+      rgba(0, 85, 255, 1) 100%
+    );
+    mask: linear-gradient(360deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%);
+    overflow: hidden;
+  }
+  .glow-two {
+    width: 100%;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(
+      50% 32% at 50% 0%,
+      #009dff 0%,
+      rgba(0, 119, 255, 0.15) 79%,
+      rgba(0, 178, 255, 0) 100%
+    );
+    z-index: 3;
+  }
+  .glow-three {
+    width: 100%;
+    position: absolute;
+    inset: 0 0 108px 0;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 153, 255, 0) 0%,
+      rgb(0, 178, 255) 100%
+    );
+    mask: radial-gradient(
+        73% 93% at 48.5% 40.300000000000004%,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.3) 64%,
+        rgba(0, 0, 0, 1) 100%
+      )
+      add;
+    z-index: 2;
+  }
+  .glow-four {
+    width: 100%;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 85, 255, 0) 0%,
+      rgba(8, 0, 255, 0.7) 100%
+    );
+    inset: 0 0 208px 0;
+    mask: radial-gradient(
+        50% 131% at 48.699999999999996% 31.8%,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.32556) 64%,
+        rgba(0, 0, 0, 1) 100%
+      )
+      add;
+    position: absolute;
+    z-index: 0;
   }
 </style>
