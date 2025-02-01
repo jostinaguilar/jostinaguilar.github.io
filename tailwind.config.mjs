@@ -4,11 +4,33 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "mesh-gradient":
-          "radial-gradient(circle at 50% 50%, hsla(210, 40%, 96%, 1) 0px, transparent 50%), radial-gradient(circle at 0% 0%, hsla(210, 40%, 96%, 1) 0px, transparent 50%), radial-gradient(circle at 100% 0%, hsla(210, 40%, 96%, 1) 0px, transparent 50%), radial-gradient(ellipse 70% 100% at 40% 0%, hsla(220, 100%, 50%, 1) 0px, transparent 50%), radial-gradient(ellipse 70% 100% at 60% 0%, hsla(250, 90%, 50%, 0.7) 0px, transparent 50%)",
-        "mesh-gradient-dark":
-          "radial-gradient(circle at 50% 50%, hsla(229, 84%, 5%, 1) 0px, transparent 50%), radial-gradient(circle at 0% 0%, hsla(229, 84%, 5%, 1) 0px, transparent 50%), radial-gradient(circle at 100% 0%, hsla(229, 84%, 5%, 1) 0px, transparent 50%), radial-gradient(ellipse 70% 100% at 40% 0%, hsla(220, 100%, 50%, 1) 0px, transparent 50%), radial-gradient(ellipse 70% 100% at 60% 0%, hsla(250, 90%, 50%, 0.7) 0px, transparent 50%)",
+      colors: {
+        primary: {
+          50: "#edf7ff",
+          100: "#d6ecff",
+          200: "#b5dfff",
+          300: "#83cdff",
+          400: "#48b0ff",
+          500: "#1e8bff",
+          600: "#066aff",
+          700: "#0055ff",
+          800: "#0841c5",
+          900: "#0d3c9b",
+          950: "#0e265d",
+        },
+        secondary: {
+          50: "#edfcff",
+          100: "#d6f7ff",
+          200: "#b5f3ff",
+          300: "#83eeff",
+          400: "#48e1ff",
+          500: "#1ec7ff",
+          600: "#06acff",
+          700: "#0099ff",
+          800: "#0874c5",
+          900: "#0d629b",
+          950: "#0e3b5d",
+        },
       },
     },
   },

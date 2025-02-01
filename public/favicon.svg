@@ -1,10 +1,14 @@
-<svg width="20" height="30" viewBox="0 0 20 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 20H0V30H10C15.5228 30 20 25.5228 20 20V10H10V20Z" fill="white"/>
-    <path d="M10 10H0V0H20L10 10Z" fill="white"/>
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.66667 10.3333H3V15H7.66667C10.244 15 12.3333 12.9107 12.3333 10.3333V5.66667H7.66667V10.3333Z" fill="currentColor"/>
+<path d="M7.66667 5.66667H3V1H12.3333L7.66667 5.66667Z" fill="currentColor"/>
+<style>
+svg {
+    color: #000;
+}
+@media (prefers-color-scheme: dark) {
+    svg {
+        color: #fff;
+    }
+}
+</style>
 </svg>

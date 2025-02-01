@@ -4,7 +4,7 @@ const { className } = Astro.props;
 
 <div class="relative group">
   <span
-    class="w-20 h-20 flex flex-col items-center bg-white/10 backdrop-blur-md p-4 justify-center rounded-2xl border border-slate-500/30 cursor-pointer"
+    class="w-20 h-20 flex flex-col items-center border-neutral-600/50 bg-gradient-to-b from-slate-800/50 from-30% to-neutral-500/0 p-4 rounded-2xl backdrop-blur-lg border"
   >
     <slot />
   </span>
@@ -14,5 +14,3 @@ const { className } = Astro.props;
       className,
     ]}></span>
 </div>
-
-<style></style>
