@@ -5,39 +5,27 @@ import Badge from "./Badge.astro";
 import GitHubIcon from "./icons/GitHub.astro";
 import LinkedInIcon from "./icons/LinkedIn.astro";
 import Navbar from "./Navbar.astro";
+import Logo from "./icons/Logo.astro";
+import icon from "../assets/icon.svg";
 ---
 
 <header class="w-full relative">
   <section
     class="max-w-screen-lg m-auto flex items-center flex-row py-10 gap-8"
   >
-    <div class="flex flex-col gap-6">
+    <divc class="size-24">
+      <img src={icon.src} alt="Icono Jostin Aguilar" />
+    </divc>
+    <div class="flex flex-col gap-2">
       <Badge />
       <div class="flex flex-col gap-2">
-        <h1 class="text-black dark:text-white text-5xl font-black">
+        <h1 class="text-black dark:text-white text-3xl font-black">
           Jostin Aguilar
         </h1>
-        <p class="text-slate-800 dark:text-slate-300 text-base">
+        <p class="text-slate-800 dark:text-slate-300 text-sm">
           Desarrollo de software, programación e informática.
         </p>
       </div>
-      <div class="flex gap-3">
-        <SocialPill
-          href="#"
-          className="bg-blue-600/10 text-blue-500 border-blue-500/50 hover:opacity-70"
-        >
-          <LinkedInIcon class="h-5 w-auto" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill
-          href="https://github.com/jostinaguilar"
-          className="bg-slate-600/10 text-slate-600 border-slate-500/70 hover:opacity-70 dark:text-slate-400"
-        >
-          <GitHubIcon class="h-5 w-auto" />
-          GitHub
-        </SocialPill>
-      </div>
     </div>
-    <Stack />
   </section>
 </header>

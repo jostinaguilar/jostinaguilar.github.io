@@ -4,15 +4,10 @@ const { className } = Astro.props;
 
 <div class="relative group">
   <span
-    class="w-20 h-20 flex flex-col items-center bg-white/10 backdrop-blur-md p-4 justify-center rounded-2xl border border-slate-500/30 cursor-pointer"
+    class="w-16 h-16 flex flex-col items-center bg-white/10 backdrop-blur-md p-3 justify-center rounded-2xl border border-slate-500/30 cursor-pointer"
   >
     <slot />
   </span>
-  <span
-    class:list={[
-      "absolute top-0 left-0 gradient rounded-2xl bg-gradient-to-t to-transparent to-50% blur-sm flex w-20 h-20 opacity-50 z-[-5] group-hover:opacity-100 transition duration-300 ease-in",
-      className,
-    ]}></span>
 </div>
 
 <style></style>
