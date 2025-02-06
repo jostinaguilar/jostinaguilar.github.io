@@ -35,20 +35,18 @@ import SquareGrid from "../components/SquareGrid.astro";
         </SquareGrid>
         <SquareGrid class="" />
       </div>
-      <SquareGrid class="col-span-1 row-span-2">
+      <SquareGrid class="col-span-1 row-span-2 overflow-hidden h-80">
         <Chip class="text-xs bg-blue-600/20 text-blue-500">
           <SquareStack />
           Stack
         </Chip>
-        <div>
-          <Stack />
-        </div>
+        <Stack />
       </SquareGrid>
       <SquareGrid class="col-span-3 row-span-2">
         <Chip class="text-xs bg-blue-600/20 text-blue-500">
           <Folder />
-          Proyectos</Chip
-        >
+          Proyectos
+        </Chip>
       </SquareGrid>
     </div>
   </main>
