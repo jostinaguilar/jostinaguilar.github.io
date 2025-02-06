@@ -1,52 +1,55 @@
 ---
-import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
-import Projects from "../components/Projects.astro";
 import Stack from "../components/Stack.astro";
 import Chip from "../components/Chip.astro";
 import Layout from "../layouts/Layout.astro";
+import SquareStack from "../components/icons/SquareStack.astro";
+import Folder from "../components/icons/Folder.astro";
+import AcademicCap from "../components/icons/AcademicCap.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import SquareGrid from "../components/SquareGrid.astro";
 ---
 
 <Layout>
-  <Navbar />
+  <div class="hidden">
+    <Navbar />
+  </div>
   <main class="w-full mx-auto max-w-screen-lg">
     <div class="grid grid-cols-4 grid-rows-4 z-10 gap-4">
-      <div
-        class="rounded-3xl relative col-span-2 row-span-2 bg-neutral-500/10 backdrop-blur-sm border border-neutral-500/30 p-8"
-      >
+      <SquareGrid class="col-span-2 row-span-2">
         <Header />
-      </div>
+      </SquareGrid>
       <div class="col-span-2 row-span-2 grid gap-4 grid-cols-2 grid-rows-3">
-        <div
-          class="rounded-3xl row-span-2 relative bg-neutral-500/10 backdrop-blur-sm border border-neutral-500/30 p-5"
-        >
-          <Chip>Educación</Chip>
-        </div>
-        <div
-          class="rounded-3xl row-span-3 relative bg-neutral-500/10 backdrop-blur-sm border border-neutral-500/30 p-5"
-        >
-          <Chip>Experiencia</Chip>
-        </div>
-        <div
-          class="rounded-3xl relative bg-neutral-500/10 backdrop-blur-sm border border-neutral-500/30 p-5"
-        >
-        </div>
+        <SquareGrid class="row-span-2">
+          <Chip class="text-xs bg-blue-600/20 text-blue-500">
+            <AcademicCap class="size-4" />
+            Educación
+          </Chip>
+        </SquareGrid>
+        <SquareGrid class="row-span-3">
+          <Chip class="text-xs bg-blue-600/20 text-blue-500">
+            <Briefcase />
+            Experiencia
+          </Chip>
+        </SquareGrid>
+        <SquareGrid class="" />
       </div>
-      <div
-        class="rounded-3xl relative col-span-1 row-span-2 bg-neutral-500/10 backdrop-blur-sm border border-neutral-500/30 p-5"
-      >
-        <Chip>Stack</Chip>
+      <SquareGrid class="col-span-1 row-span-2">
+        <Chip class="text-xs bg-blue-600/20 text-blue-500">
+          <SquareStack />
+          Stack
+        </Chip>
         <div>
           <Stack />
         </div>
-      </div>
-      <div
-        class="rounded-3xl relative col-span-3 row-span-2 bg-neutral-500/10 backdrop-blur-sm border border-neutral-500/30 p-5"
-      >
-        <Chip>Proyectos</Chip>
-      </div>
+      </SquareGrid>
+      <SquareGrid class="col-span-3 row-span-2">
+        <Chip class="text-xs bg-blue-600/20 text-blue-500">
+          <Folder />
+          Proyectos</Chip
+        >
+      </SquareGrid>
     </div>
   </main>
-  <!--   <Footer /> -->
 </Layout>

@@ -2,11 +2,11 @@
 const { class: className } = Astro.props;
 ---
 
-<span
+<div
   class:list={[
-    "py-1 pl-2.5 pr-3 rounded-full font-semibold inline-flex items-center gap-1",
+    "rounded-3xl bg-neutral-500/10 backdrop-blur-sm border border-neutral-500/30 p-5",
     className,
   ]}
 >
   <slot />
-</span>
+</div>

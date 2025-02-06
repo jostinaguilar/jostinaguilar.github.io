@@ -1,31 +1,61 @@
 ---
-import SocialPill from "./SocialPill.astro";
-import Stack from "./Stack.astro";
 import Badge from "./Badge.astro";
-import GitHubIcon from "./icons/GitHub.astro";
-import LinkedInIcon from "./icons/LinkedIn.astro";
-import Navbar from "./Navbar.astro";
-import Logo from "./icons/Logo.astro";
 import icon from "../assets/icon.svg";
+import Chip from "./Chip.astro";
+import Language from "./icons/Languaje.astro";
+import MapPin from "./icons/MapPin.astro";
+import AcademicCap from "./icons/AcademicCap.astro";
+import SocialPill from "./SocialPill.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import GitHub from "./icons/GitHub.astro";
 ---
 
-<header class="w-full relative">
-  <section
-    class="max-w-screen-lg m-auto flex items-center flex-row py-10 gap-8"
-  >
-    <divc class="size-24">
+<header class="w-full h-full flex flex-col gap-4 justify-center p-3">
+  <section class="flex items-center flex-row gap-8 py-4">
+    <div class="size-24">
       <img src={icon.src} alt="Icono Jostin Aguilar" />
-    </divc>
-    <div class="flex flex-col gap-2">
+    </div>
+    <div class="flex flex-col gap-1.5">
       <Badge />
-      <div class="flex flex-col gap-2">
-        <h1 class="text-black dark:text-white text-3xl font-black">
-          Jostin Aguilar
-        </h1>
-        <p class="text-slate-800 dark:text-slate-300 text-sm">
-          Desarrollo de software, programación e informática.
-        </p>
-      </div>
+      <h1 class="text-black dark:text-white text-3xl font-black">
+        Jostin Aguilar
+      </h1>
+      <p class="text-neutral-800 dark:text-neutral-300 text-sm">
+        Software, desarrollo y programación.
+      </p>
     </div>
   </section>
+  <div class="flex gap-2 justify-between">
+    <Chip
+      class="text-sm bg-neutral-500/10 border border-neutral-500/30 text-neutral-300"
+    >
+      <AcademicCap class="size-5 text-primary-500" />
+      Computación e Informática
+    </Chip>
+    <Chip
+      class="text-sm bg-neutral-500/10 border border-neutral-500/30 text-neutral-300"
+    >
+      <Language class="size-5 text-primary-500" />
+      Español
+    </Chip>
+    <Chip
+      class="text-sm bg-neutral-500/10 border border-neutral-500/30 text-neutral-300"
+    >
+      <MapPin class="size-5 text-primary-500" />
+      Perú
+    </Chip>
+  </div>
+  <div class="flex w-full gap-4">
+    <SocialPill
+      class="w-full"
+      href="https://www.linkedin.com/in/jostinaguilar/"
+    >
+      <LinkedIn class="size-6" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill class="w-full" href="https://github.com/jostinaguilar">
+      <GitHub class="size-6" />
+      GitHub
+    </SocialPill>
+  </div>
 </header>
