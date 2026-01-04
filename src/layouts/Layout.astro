@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import "@fontsource/geist-sans/300.css";
+import "@fontsource/geist-sans/200.css";
 import "@fontsource/geist-sans/400.css";
 import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-sans/600.css";
@@ -16,7 +16,41 @@ import "@fontsource/geist-sans/900.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>Jostin Aguilar</title>
 	</head>
-	<body class="flex justify-center items-center w-full min-h-dvh">
+	<body
+		class="flex justify-center items-center w-full min-h-dvh bg-background"
+	>
+		<div class="grain"></div>
+		<div class="gradient"></div>
 		<slot />
 	</body>
 </html>
+
+<style scoped>
+	.gradient {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: -2;
+		background: radial-gradient(circle, #1e40af, #1d4ed8);
+		mask-image: radial-gradient(
+			90% 100% at 100% 0%,
+			black 10%,
+			transparent 90%
+		);
+	}
+	.grain {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		z-index: -1;
+		pointer-events: none;
+		mix-blend-mode: overlay;
+		background-image: url("/grain.png");
+		background-repeat: repeat;
+		background-size: 100px 100px;
+		opacity: 1;
+		background-position: top left;
+	}
+</style>

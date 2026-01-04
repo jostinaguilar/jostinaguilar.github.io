@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
 @theme{
+    --color-background: oklch(0.1408 0.0044 285.82);
+    --color-foreground: oklch(1 0 0);
+    --color-primary: oklch(0.4706 0.2655 265.28);
+    --color-secondary: oklch(0.5575 0.2525 302.32);
+
     --font-sans: 'Geist Sans', sans-serif;
 }
