@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "@fontsource/geist-sans/200.css";
+import "@fontsource/geist-sans/300.css";
 import "@fontsource/geist-sans/400.css";
 import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-sans/600.css";
@@ -17,11 +18,13 @@ import "@fontsource/geist-sans/900.css";
 		<title>Jostin Aguilar</title>
 	</head>
 	<body
-		class="flex justify-center items-center w-full min-h-dvh bg-background"
+		class="flex justify-center items-center w-full min-h-dvh bg-background antialiased"
 	>
 		<div class="grain"></div>
 		<div class="gradient"></div>
-		<slot />
+		<main class="w-full max-w-7xl mx-auto px-6 py-4">
+			<slot />
+		</main>
 	</body>
 </html>
 

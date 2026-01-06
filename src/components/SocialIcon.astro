@@ -1,0 +1,14 @@
+---
+const { name } = Astro.props;
+const { href } = Astro.props;
+---
+
+<a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-foreground/70 hover:text-foreground flex gap-1.5 items-center"
+>
+    <slot />
+    <span class="text-sm font-extralight">{name}</span>
+</a>
