@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "astro-site",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,7 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/geist-sans": "^5.2.5",
+    "@fontsource-variable/geist": "^5.2.8",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.6",
     "tailwindcss": "^4.1.18"
