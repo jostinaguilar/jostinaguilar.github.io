@@ -1,7 +1,7 @@
 <section>
     <div class="grid text-foreground grid-cols-1 lg:grid-cols-2 gap-4">
         <div
-            class="bg-neutral-700/5 border border-neutral-700/10 p-4 rounded-2xl"
+            class="bg-neutral-700/5 border border-neutral-700/10 p-4 rounded-2xl flex flex-col gap-4"
         >
             <div
                 class="text-blue-500 flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-blue-800/10 w-max"
@@ -19,6 +19,108 @@
                         fill="currentColor"></path></svg
                 >
                 Stack
+            </div>
+            <div class="space-y-2">
+                <span class="text-sm inline-flex text-foreground/80"
+                    >Frontend</span
+                >
+                <div class="flex gap-2 flex-wrap">
+                    <div
+                        class="bg-neutral-600/10 bg p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/vue.svg"
+                            alt="Vue Logo"
+                            class="size-full"
+                        />
+                    </div>
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/react.svg"
+                            alt="React Logo"
+                            class="size-full"
+                        />
+                    </div>
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/astro.svg"
+                            alt="Astro Logo"
+                            class="size-full"
+                        />
+                    </div>
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/tailwindcss.svg"
+                            alt="Tailwind CSS Logo"
+                            class="size-full"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <span class="text-sm inline-flex text-foreground/80"
+                    >Backend</span
+                >
+                <div class="flex gap-2 flex-wrap">
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/laravel.svg"
+                            alt="Laravel Logo"
+                            class="size-full"
+                        />
+                    </div>
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/php.svg"
+                            alt="PHP Logo"
+                            class="size-full"
+                        />
+                    </div>
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/mysql.svg"
+                            alt="MySQL Logo"
+                            class="size-full"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <span class="text-sm inline-flex text-foreground/80"
+                    >Herramientas</span
+                >
+                <div class="flex gap-2 flex-wrap">
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/git.svg"
+                            alt="Git Logo"
+                            class="size-full"
+                        />
+                    </div>
+                    <div
+                        class="bg-neutral-600/10 p-2 border border-neutral-600/20 aspect-square size-12 rounded-md"
+                    >
+                        <img
+                            src="/icons/github.svg"
+                            alt="GitHub Logo"
+                            class="size-full"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
         <div
@@ -65,3 +167,14 @@
         </div>
     </div>
 </section>
+
+<style scoped>
+    .bg::after {
+        background-color: inherit;
+        position: absolute;
+        content: "";
+        width: 3rem;
+        height: 3rem;
+        filter: blur(12px) saturate(150%);
+    }
+</style>
