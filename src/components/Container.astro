@@ -1,9 +1,12 @@
 ---
 import Stack from "./Stack.astro";
+import StackEmpty from "./StackEmpty.astro";
 ---
 
 <section>
-    <div class="grid text-foreground grid-cols-1 lg:grid-cols-2 gap-4">
+    <div
+        class="grid text-foreground grid-cols-1 lg:grid-cols-4 gap-4 sm:grid-cols-2"
+    >
         <div
             class="bg-neutral-700/5 border border-neutral-700/10 p-4 rounded-2xl
         flex flex-col gap-4"
@@ -26,7 +29,7 @@ import Stack from "./Stack.astro";
                 Stack
             </div>
             <div class="space-y-2">
-                <span class="text-sm inline-flex text-foreground/80"
+                <span class="text-sm inline-flex text-foreground/80 font-light"
                     >Frontend</span
                 >
                 <div class="flex gap-2 flex-wrap">
@@ -57,22 +60,50 @@ import Stack from "./Stack.astro";
                 </div>
             </div>
             <div class="space-y-2">
-                <span class="text-sm inline-flex text-foreground/80"
+                <span class="text-sm inline-flex text-foreground/80 font-light"
                     >Backend</span
                 >
                 <div class="flex gap-2 flex-wrap">
-                    <Stack src="/icons/laravel.svg" alt="Laravel Logo" />
-                    <Stack src="/icons/php.svg" alt="PHP Logo" />
-                    <Stack src="/icons/mysql.svg" alt="MySQL Logo" />
+                    <Stack
+                        src="/icons/laravel.svg"
+                        alt="Laravel Logo"
+                        href="https://laravel.com/"
+                        style="--glow-color:#eb4432;"
+                    />
+                    <Stack
+                        src="/icons/php.svg"
+                        alt="PHP Logo"
+                        href="https://www.php.net/"
+                        style="--glow-color:#4f5b93;"
+                    />
+                    <Stack
+                        src="/icons/mysql.svg"
+                        alt="MySQL Logo"
+                        href="https://www.mysql.com/"
+                        style="--glow-color:#3e6e93;"
+                    />
+                    <StackEmpty />
                 </div>
             </div>
             <div class="space-y-2">
-                <span class="text-sm inline-flex text-foreground/80"
+                <span class="text-sm inline-flex text-foreground/80 font-light"
                     >Herramientas</span
                 >
                 <div class="flex gap-2 flex-wrap">
-                    <Stack src="/icons/git.svg" alt="Git Logo" />
-                    <Stack src="/icons/github.svg" alt="GitHub Logo" />
+                    <Stack
+                        src="/icons/git.svg"
+                        alt="Git Logo"
+                        href="https://git-scm.com/"
+                        style="--glow-color: #d7834f;"
+                    />
+                    <Stack
+                        src="/icons/github.svg"
+                        alt="GitHub Logo"
+                        href="https://github.com/"
+                        style="--glow-color: #e8eaea;"
+                    />
+                    <StackEmpty />
+                    <StackEmpty />
                 </div>
             </div>
         </div>
@@ -98,7 +129,7 @@ import Stack from "./Stack.astro";
             </div>
         </div>
         <div
-            class="bg-neutral-700/5 border border-neutral-700/10 p-4 rounded-2xl lg:col-span-2"
+            class="bg-neutral-700/5 border border-neutral-700/10 p-4 rounded-2xl sm:col-span-2"
         >
             <div
                 class="text-blue-500 flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-blue-800/10 w-max"
