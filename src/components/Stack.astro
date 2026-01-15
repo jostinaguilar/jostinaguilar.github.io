@@ -4,13 +4,13 @@ const { href, src, alt, style, name } = Astro.props;
 
 <a
     href={href}
-    class="bg-neutral-700/10 gap-1.5 h-auto group flex-col w-full items-center py-2.5 px-4 border border-neutral-700/20 rounded-lg relative inline-flex stack overflow-hidden"
+    class="bg-neutral-700/10 gap-2 sm:gap-1 h-auto group flex-row sm:flex-col w-full items-center py-2 px-2 border border-neutral-700/20 rounded-lg relative inline-flex stack overflow-hidden justify-center"
     style={style}
 >
     <img
         src={src}
         alt={alt}
-        class="size-6 group-hover:scale-125 transition-transform duration-500"
+        class="size-5 group-hover:scale-125 transition-transform duration-500"
     />
     <span class="text-xs text-foreground inline-flex font-light">{name}</span>
 </a>
