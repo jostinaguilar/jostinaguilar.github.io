@@ -1,29 +1,31 @@
 ---
-const { href, src, alt, style, name } = Astro.props;
+const { src, alt, style, name } = Astro.props;
 ---
 
-<a
-    href={href}
-    class="bg-neutral-700/10 gap-2 sm:gap-1 h-auto group flex-row sm:flex-col w-full items-center py-2 px-2 border border-neutral-700/20 rounded-lg relative inline-flex stack overflow-hidden justify-center"
+<div
+    class="bg-neutral-800/20 border border-neutral-800/40 stack rounded-xl gap-2.5 h-auto group flex-row w-full items-center py-2 px-3 relative inline-flex overflow-hidden justify-start"
     style={style}
 >
     <img
         src={src}
         alt={alt}
-        class="size-5 group-hover:scale-125 transition-transform duration-500"
+        class="size-5 group-hover:scale-110 transition-transform duration-500"
     />
-    <span class="text-xs text-foreground inline-flex font-light">{name}</span>
-</a>
+    <span
+        class="text-xs whitespace-nowrap text-foreground/80 group-hover:text-foreground :inline-flex font-light"
+    >
+        {name}
+    </span>
+</div>
 
 <style scoped>
     .stack::after {
         background-color: var(--glow-color);
         content: "";
         position: absolute;
-        top: 0%;
-        transform: translateY(50%);
-        width: 5rem;
-        height: 5rem;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
         z-index: -1;
         border-radius: 100%;
         filter: blur(12px) saturate(150%);

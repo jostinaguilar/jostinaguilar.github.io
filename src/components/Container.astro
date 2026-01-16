@@ -1,65 +1,100 @@
 ---
-import BriefcaseIcon from "./icons/BriefcaseIcon.astro";
-import FolderClosedIcon from "./icons/FolderClosedIcon.astro";
+import CodeWrapIcon from "./icons/CodeWrapIcon.astro";
 import LayersIcon from "./icons/LayersIcon.astro";
 import Stack from "./Stack.astro";
 ---
 
-<section class="flex flex-col gap-8">
+<section class="space-y-16">
     <div class="space-y-4">
         <div
-            class="text-blue-500 flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-blue-800/10 w-max"
+            class="text-foreground flex items-center gap-2 font-medium text-base"
         >
-            <LayersIcon class="size-3.5" />
+            <CodeWrapIcon class="size-4" />
+            Proyectos
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div
+                class="bg-neutral-800/20 border border-neutral-800/40 rounded-xl w-full min-h-32 p-4 group"
+            >
+                <div class="size-full grid place-items-center">
+                    <span class="text-foreground/50 text-xs font-extralight">
+                        Próximamente
+                    </span>
+                </div>
+            </div>
+            <div
+                class="bg-neutral-800/20 border border-neutral-800/40 rounded-xl w-full min-h-32"
+            >
+                <div class="size-full grid place-items-center">
+                    <span class="text-foreground/50 text-xs font-extralight">
+                        Próximamente
+                    </span>
+                </div>
+            </div>
+            <div
+                class="bg-neutral-800/20 border border-neutral-800/40 rounded-xl w-full min-h-32"
+            >
+                <div class="size-full grid place-items-center">
+                    <span class="text-foreground/50 text-xs font-extralight">
+                        Próximamente
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space-y-4">
+        <div
+            class="text-foreground flex items-center gap-2 font-medium text-base"
+        >
+            <LayersIcon class="size-4" />
             Stack
         </div>
-        <div class="grid gap-2 grid-cols-[repeat(auto-fit,minmax(6rem,1fr))]">
+        <div class="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-8 gap-2">
             <Stack
                 src="/icons/vue.svg"
                 alt="Vue Logo"
-                href="https://vuejs.org/"
                 style="--glow-color: #40b782;"
                 name="Vue"
             />
             <Stack
                 src="/icons/react.svg"
                 alt="React Logo"
-                href="https://react.dev/"
                 style="--glow-color: #00d6fd;"
                 name="React"
             />
             <Stack
                 src="/icons/astro.svg"
                 alt="Astro Logo"
-                href="https://astro.build/"
                 style="--glow-color: #f041ff;"
                 name="Astro"
             />
             <Stack
                 src="/icons/tailwindcss.svg"
                 alt="Tailwind CSS Logo"
-                href="https://tailwindcss.com/"
                 style="--glow-color: #00bcff;"
-                name="Tailwind CSS"
+                name="Tailwind"
+            />
+            <Stack
+                src="/icons/livewire.svg"
+                alt="Livewire Logo"
+                style="--glow-color: #ea5c96;"
+                name="Livewire"
             />
             <Stack
                 src="/icons/laravel.svg"
                 alt="Laravel Logo"
-                href="https://laravel.com/"
                 style="--glow-color:#eb4432;"
                 name="Laravel"
             />
             <Stack
                 src="/icons/php.svg"
                 alt="PHP Logo"
-                href="https://www.php.net/"
                 style="--glow-color:#4f5b93;"
                 name="PHP"
             />
             <Stack
                 src="/icons/mysql.svg"
                 alt="MySQL Logo"
-                href="https://www.mysql.com/"
                 style="--glow-color:#00758f;"
                 name="MySQL"
             />
@@ -67,33 +102,15 @@ import Stack from "./Stack.astro";
             <Stack
                 src="/icons/git.svg"
                 alt="Git Logo"
-                href="https://git-scm.com/"
                 style="--glow-color: #de4c36;"
                 name="Git"
             />
             <Stack
                 src="/icons/github.svg"
                 alt="GitHub Logo"
-                href="https://github.com/"
                 style="--glow-color: #525252;"
                 name="GitHub"
             />
-        </div>
-    </div>
-    <div class="space-y-4">
-        <div
-            class="text-blue-500 flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-blue-800/10 w-max"
-        >
-            <BriefcaseIcon class="size-3.5" />
-            Experiencia
-        </div>
-    </div>
-    <div class="space-y-4">
-        <div
-            class="text-blue-500 flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-blue-800/10 w-max"
-        >
-            <FolderClosedIcon class="size-3.5" />
-            Proyectos
         </div>
     </div>
 </section>
