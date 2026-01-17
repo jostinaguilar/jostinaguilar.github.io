@@ -1,0 +1,39 @@
+---
+const { src, alt, style, name } = Astro.props;
+---
+
+<div
+    class="bg-neutral-800/20 border border-neutral-800/40 stack rounded-xl gap-2.5 h-auto group flex-row w-full items-center py-2 px-3 relative inline-flex overflow-hidden justify-start"
+    style={style}
+>
+    <img
+        src={src}
+        alt={alt}
+        class="size-5 group-hover:scale-110 transition-transform duration-500"
+    />
+    <span
+        class="text-xs whitespace-nowrap text-foreground/80 group-hover:text-foreground :inline-flex font-light"
+    >
+        {name}
+    </span>
+</div>
+
+<style scoped>
+    .stack::after {
+        background-color: var(--glow-color);
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+        z-index: -1;
+        border-radius: 100%;
+        filter: blur(12px) saturate(150%);
+        opacity: 0.1;
+        transition: all 0.5s ease;
+    }
+    .stack:hover::after {
+        opacity: 0.2;
+        scale: 1.5;
+    }
+</style>

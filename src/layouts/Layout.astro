@@ -12,7 +12,7 @@ import "@fontsource-variable/geist";
 		<title>Jostin Aguilar</title>
 	</head>
 	<body
-		class="flex select-none justify-center items-center w-full min-h-dvh bg-background antialiased"
+		class="select-none w-full min-h-dvh bg-background antialiased flex flex-col"
 	>
 		<div
 			class="fixed inset-0 pointer-events-none mix-blend-overlay bg-blend-overlay opacity-100"
@@ -20,9 +20,7 @@ import "@fontsource-variable/geist";
 		>
 		</div>
 		<div class="gradient"></div>
-		<main class="w-full max-w-4xl mx-auto px-6 py-4">
-			<slot />
-		</main>
+		<slot />
 	</body>
 </html>
 
